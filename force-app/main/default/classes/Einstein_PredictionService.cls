@@ -854,7 +854,8 @@ public class Einstein_PredictionService {
     private void handleError(Integer statusCode, String message) {
         httpStatusCode = statusCode;
         httpErrorMessage = message;
-        System.debug(LoggingLevel.Error, 'Response finished with Error: ' + message);
+        System.debug(LoggingLevel.Error, 'Response finished with Error: ' + message 
+                        + ' with status code ' + statusCode);
     }
 
     /**

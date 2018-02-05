@@ -1,3 +1,5 @@
 .sfdx
 .DS_STORE
 einstein_platform.pem
+mdapi/*
+mdapiout/*
