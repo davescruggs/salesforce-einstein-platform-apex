@@ -12,6 +12,13 @@ See the included Playground in action.
 
 [![Playground](https://img.youtube.com/vi/poY8wR0pVks/0.jpg)](https://www.youtube.com/watch?v=poY8wR0pVks)
 
+# Easy SFDC deploy button
+<a href="https://githubsfdeploy.herokuapp.com?owner=davescruggs&repo=salesforce-einstein-platform-apex">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
+</a>
+
+
 ## Version history
 
 The current version is 2.5.0 (git tag). Check out the full [changelog](https://github.com/muenzpraeger/salesforce-einstein-platform-apex/blob/master/CHANGELOG.md).
