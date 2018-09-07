@@ -3,3 +3,8 @@
 einstein_platform.pem
 mdapi/*
 mdapiout/*
+**profiles
+certs
+**apexScripts
+.gitignore
+.vscode/settings.json

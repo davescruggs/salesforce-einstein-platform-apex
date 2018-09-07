@@ -21,7 +21,7 @@ See the included Playground in action.
 
 ## Version history
 
-The current version is 2.5.0 (git tag). Check out the full [changelog](https://github.com/muenzpraeger/salesforce-einstein-platform-apex/blob/master/CHANGELOG.md).
+Check out the full [changelog](https://github.com/muenzpraeger/salesforce-einstein-platform-apex/blob/master/CHANGELOG.md).
 
 ## Prerequisites
 
@@ -41,40 +41,17 @@ Clone the repo to your local file system.
 git clone https://github.com/muenzpraeger/salesforce-einstein-platform-apex
 ```
 
-Change into the git repo directory and create a new scratch org
-
+run the orgInit.sh script
 ```
-sfdx force:org:create -s -f config/project-scratch-def.json
-```
-
-Push the source to the newly created org.
-```
-sfdx force:source:push
+./orgInit
 ```
 
-Assign the Einstein Platform Playground permission set to your user
-
-```
-sfdx force:user:permset:assign -n Einstein_Platform_Playground
-````
-
-Open the scratch org
-
-```
-sfdx force:org:open
-```
-
-### Salesforce DX - existing scratch org
-
-If you want to add the wrapper to an existing org you can either copy the contents manually from this repo.
-
-Alternatively you can use [Wade's OSS plugin for Salesforce DX](https://www.npmjs.com/package/sfdx-waw-plugin).
-
-### Salesforce DX - deploy online into a scratch org
+### Salesforce DX - deploy to an org from your hub
 
 Again thanks to Wade for creating this neat feature.
 
 [![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com/)
+
 
 ### Salesforce DX - deploy into developer edition or production org
 
@@ -106,12 +83,14 @@ sfdx force:mdapi:deploy -d mdapi -u yourOrgAlias
 After you've added the wrapper files two steps are required:
 
 * Set the value for _Einstein EMail_ in Custom Settings => Einstein Settings (via the _Manage_ button) for that org to the email address that you've used to sign up for Einstein Platform.
-* Store the Einstein Platform file as File in the org. The name must be _einstein_platform_.
+* Store the Einstein Platform file as File in the org. The name must be _einstein_platform_. If you want to use this in production make sure that the certificate isn't shared publicly. An option is for example to create and store a custom encrypted blob, and then decrypt via code.
 
 If you went through [my Trailhead project](https://trailhead.salesforce.com/projects/build-a-cat-rescue-app-that-recognizes-cat-breeds) you likely went through that excercise already.
 
 The installation adds a new Lightning App to your Salesforce org for the included Playground.
 ![playground](resources/einstein_platform.png)
+
+*If you want to use this in production make sure that the certificate isn't shared publicly. Options are for example to create and store a custom encrypted blob, and then decrypt via code.*
 
 ## Usage examples
 ### Creating a PredictionService

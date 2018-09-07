@@ -6,7 +6,9 @@
     <formFactors>Large</formFactors>
     <label>Einstein Platform</label>
     <navType>Standard</navType>
-    <tab>Playground</tab>
+    <tabs>Playground</tabs>
+    <tabs>Einstein_Usage</tabs>
+    <tabs>Language_Model_Builder</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Einstein_Demo_UtilityBar</utilityBar>
 </CustomApplication>
